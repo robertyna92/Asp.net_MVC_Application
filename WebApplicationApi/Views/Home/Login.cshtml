@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Css/Style.css")
+</head>
+<body style="padding:0">
+    <div class="container_welcome" ng-app="" ng-controller="">
+        <div class="container_forms">
+            <form>
+                <div class="form-group " ng-click="submit()">           
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" ng-model="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="password">
+                    </div>
+                </div>
+                <button type="submit" class="btn " value="submit">@Html.ActionLink("Log-in", "Home", "Home")</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

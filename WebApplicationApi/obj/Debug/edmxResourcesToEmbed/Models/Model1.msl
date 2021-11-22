@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Accessi">
+      <EntityTypeMapping TypeName="IsTypeOf(Database1Model.Accessi)">
+        <MappingFragment StoreEntitySet="Accessi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="datatime" ColumnName="datatime" />
+          <ScalarProperty Name="id_utente" ColumnName="id_utente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persone">
+      <EntityTypeMapping TypeName="IsTypeOf(Database1Model.Persone)">
+        <MappingFragment StoreEntitySet="Persone">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preferiti">
+      <EntityTypeMapping TypeName="IsTypeOf(Database1Model.Preferiti)">
+        <MappingFragment StoreEntitySet="Preferiti">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="id_prodotto" ColumnName="id_prodotto" />
+          <ScalarProperty Name="id_utente" ColumnName="id_utente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prodotti">
+      <EntityTypeMapping TypeName="IsTypeOf(Database1Model.Prodotti)">
+        <MappingFragment StoreEntitySet="Prodotti">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nome_prodotto" ColumnName="nome_prodotto" />
+          <ScalarProperty Name="prezzo" ColumnName="prezzo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

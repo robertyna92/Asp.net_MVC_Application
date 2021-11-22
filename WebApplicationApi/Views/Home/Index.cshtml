@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="~/Scripts/angularjs/welcome.js"></script>
+
+    @Styles.Render("~/Css/Style.css")
+</head>
+<body style="padding:0">
+    <div class="container_welcome" >
+        <div class="container_forms">
+            <form>
+                <div class="form-group ">
+                    <div class="form-group">
+                        <label for="validationDefault01" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationDefault02" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="validationDefault02" placeholder="Collins" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="validationServer03" class="form-label">Città</label>
+                        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Aberdeen" aria-describedby="validationServer03Feedback" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@example.com" ng-model="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="password">
+                    </div>
+                </div>
+                <button type="submit" class="btn " value="submit">@Html.ActionLink("Registrati", "Login", "Home")</button>
+                <p> Sei già registrato? Effettua il @Html.ActionLink("log-in", "Login", "Home")</p>
+            </form>
+        </div>
+    </div>
+ 
+   
+</body>
+</html>
+
+
+

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplicationApi.Models.Prodotti>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nome_prodotto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prezzo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome_prodotto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prezzo)
+        </td>
+        <td>
+
+            @Html.ActionLink("+", "Create", new { id=item.Id }) |
+            @Html.ActionLink("-", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

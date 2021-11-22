@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accessi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="datatime" Type="datetime" Nullable="false" />
+    <Property Name="id_utente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persone">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Preferiti">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_prodotto" Type="int" Nullable="false" />
+    <Property Name="id_utente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prodotti">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nome_prodotto" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="prezzo" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Accessi" EntityType="Self.Accessi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persone" EntityType="Self.Persone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Preferiti" EntityType="Self.Preferiti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prodotti" EntityType="Self.Prodotti" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

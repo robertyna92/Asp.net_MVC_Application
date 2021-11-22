@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebApplicationApi.Models.Persone>
+
+@*@{
+        ViewBag.Title = "Index";
+    }*@
+
+<h2>Dashboard</h2>
+<body style="padding:0">
+    <div class="container_welcome">
+        <div class="container_forms">
+            @foreach (var item in Model)
+            {
+
+                <p>
+                    Welcome,
+                    @Html.DisplayFor(modelItem => item.name)
+                    @Html.DisplayFor(modelItem => item.surname)
+                </p>
+
+                <p>
+                    @Html.DisplayFor(modelItem => item.email)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.password)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.city)
+                </p>
+                <p>
+                    @Html.DisplayFor(modelItem => item.address)
+                </p>
+
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+
+                @Html.ActionLink("Accessi", "Create", "Accessi", new { id = item.Id })
+
+                @Html.ActionLink("Prodotti", "Details", "Prodotti", new { id = item.Id })
+
+
+            }
+
+        </div>
+    </div>
+</body>
